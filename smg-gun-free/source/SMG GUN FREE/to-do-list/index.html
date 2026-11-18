@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Task Manager</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Daily Routine Scheduler</h1>
+      <form id="search-form" action="">
+        <button class="search-btn" type="submit">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <input
+          type="search"
+          placeholder="Search for your task..."
+          id="search"
+          required
+        />
+      </form>
+    </header>
+
+    <nav>
+      <h2>Categories</h2>
+      <div class="category-buttons">
+        <button type="button" class="nav-btn">Work</button>
+        <button type="button" class="nav-btn">School</button>
+        <button type="button" class="nav-btn">Grocery List</button>
+        <button type="button" class="nav-btn">General</button>
+      </div>
+    </nav>
+
+    <main>
+      <header id="tasks-header">
+        <h2>My Daily Task Lists</h2>
+        <form id="add-task-form">
+          <input type="text" placeholder="What do you want to add" required />
+          <select id="categories">
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Grocery">Grocery List</option>
+            <option value="General">General</option>
+          </select>
+          <button type="submit" id="add-task-btn">
+            Add <ion-icon name="add-outline"></ion-icon>
+          </button>
+        </form>
+      </header>
+
+      <section id="tasks-list">
+        <article class="task-category Work">
+          <h3>Work</h3>
+          <ul>
+            <li class="task">
+              Go to the office
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Work on my project
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Review my progress
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="delete-all-btn">Delete all</button>
+        </article>
+
+        <article class="task-category School">
+          <h3>School</h3>
+          <ul>
+            <li class="task">
+              Math homework
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Science class
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              English essay
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="delete-all-btn">Delete all</button>
+        </article>
+
+        <article class="task-category Grocery">
+          <h3>Grocery List</h3>
+          <ul>
+            <li class="task">
+              Bread
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Milk
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Eggs
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="delete-all-btn">Delete all</button>
+        </article>
+
+        <article class="task-category General">
+          <h3>General</h3>
+          <ul>
+            <li class="task">
+              Brush my teeth
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Shower
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+            <li class="task">
+              Eat breakfast
+              <button class="delete-btn">
+                <ion-icon name="trash-outline"></ion-icon>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="delete-all-btn">Delete all</button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

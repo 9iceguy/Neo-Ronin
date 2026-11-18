@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header Styles */
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: #fff;
+}
+
+#main-header h1 {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  text-align: center;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #1e90ff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: #fff;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+#search-form input {
+  border: none;
+  padding: 8px;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#search-form ion-icon {
+  color: #1e90ff;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: 2px solid #1e90ff;
+  border-radius: 8px;
+  background-color: #1e90ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #fff;
+  color: #1e90ff;
+  border: 2px solid #1e90ff;
+}
+
+/* Tasks Header Styles */
+#tasks-header {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#tasks-header h2 {
+  margin-bottom: 20px;
+}
+
+#add-task-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#add-task-form input,
+#add-task-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #1e90ff;
+  outline: none;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+#add-task-btn {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: 2px solid #1e90ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #fff;
+  color: #1e90ff;
+  border: 2px solid #1e90ff;
+}
+
+/* Tasks List Styles */
+#tasks-list {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.task-category {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-category h3 {
+  margin-bottom: 15px;
+}
+
+.task-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.task-category li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #c82333;
+  scale: 1.5;
+}
+
+.delete-all-btn {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-all-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  #main-header h1 {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .category-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #tasks-list {
+    width: 100%;
+  }
+
+  .task-category {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #main-header {
+    padding: 10px;
+  }
+
+  #search-form {
+    padding: 5px;
+  }
+
+  nav {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 8px 15px;
+  }
+
+  #tasks-header {
+    width: 100%;
+  }
+
+  #add-task-form input,
+  #add-task-form select {
+    max-width: 100%;
+  }
+
+  #tasks-list {
+    width: 100%;
+  }
+
+  .task-category {
+    padding: 10px;
+  }
+
+  .task-category h3 {
+    font-size: 1rem;
+  }
+
+  .task-category li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
